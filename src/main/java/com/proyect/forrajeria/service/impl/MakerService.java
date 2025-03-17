@@ -17,6 +17,12 @@ public class MakerService implements IMakerService {
 
 
     @Override
+    public List<Maker> findMakerByLetter(String letter) {
+        return makerRepository.findMakerByLetter(letter);
+    }
+
+
+    @Override
     public List<Maker> findAllMaker() {
         List<Maker> makerList = makerRepository.findAll();
         return makerList;

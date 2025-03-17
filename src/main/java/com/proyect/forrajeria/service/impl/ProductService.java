@@ -3,6 +3,7 @@ package com.proyect.forrajeria.service.impl;
 import com.proyect.forrajeria.entity.Product;
 import com.proyect.forrajeria.repository.IProductRepository;
 import com.proyect.forrajeria.service.IProductService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -45,6 +46,7 @@ public class ProductService implements IProductService {
         newProduct.setProductProtein(lastProduct.getProductProtein());
         newProduct.setProductWeight(lastProduct.getProductWeight());
         newProduct.setProductFlavor(lastProduct.getProductFlavor());
+        newProduct.setProductSize(lastProduct.getProductSize());
 
         productRepository.save(newProduct);
     }

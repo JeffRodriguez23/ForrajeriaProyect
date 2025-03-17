@@ -12,5 +12,6 @@ public interface IMakerService {
     public void saveMaker(Maker maker);
     public void updateMaker(Long id , String newName);
     public void deleteMaker(Long id);
+    public List<Maker>findMakerByLetter(String letter);
 
 }

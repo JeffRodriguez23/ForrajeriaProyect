@@ -30,6 +30,8 @@ public class Product {
     private String productWeight;
     @Column(name = "sabor")
     private String productFlavor;
+    @Column(name = "tamanio")
+    private String productSize;
 
     @ManyToOne
     @JoinColumn(name = "id_maker")
